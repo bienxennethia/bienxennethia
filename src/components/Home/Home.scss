@@ -1,0 +1,27 @@
+.home {
+  
+  &__container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    // background-image: url('../../img/background-2.jpeg');
+  }
+
+  &__title {
+    font-size: 10rem;
+    font-weight: 700;
+    color: var(--hot-pink);
+  }
+
+  &__copy {
+    font-size: 2rem;
+  }
+
+  &__title,
+  &__copy {
+    margin: 0;
+    text-align: center;
+  }
+}
