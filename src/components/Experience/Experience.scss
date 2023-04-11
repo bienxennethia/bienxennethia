@@ -1,0 +1,41 @@
+.experience {
+  &__content {
+
+    &--company {
+      color: var(--blue);
+    }
+
+    &--item {
+      padding: 25px;
+
+      &:first-of-type {
+        padding-top: 0;
+      }
+
+      &:last-of-type {
+        padding-bottom: 0;
+      }
+    }
+
+    &--date {
+      color: var(--hot-pink);
+    }
+
+    ul {
+      list-style-type: circle;
+      list-style-position: inside;
+      text-indent:-20px; 
+      margin-left:20px
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    &__container {
+      padding: 50px;
+    }
+    &__content {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

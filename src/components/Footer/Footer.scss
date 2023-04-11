@@ -1,0 +1,26 @@
+.footer {
+  color: #7f7f7f;
+  
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    row-gap: 15px;
+
+    p {
+      text-align: center;
+    }
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+
+      p {
+        text-align: left;
+      }
+    }
+  }
+}
