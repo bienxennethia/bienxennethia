@@ -7,7 +7,7 @@ const Project = (props) => {
   return (
     <div className="projects__card">
       <div className="projects__card-image">
-        <Link to="https://www.venetianlasvegas.com/" target="_blank" rel="noopener noreferrer" className="projects__card-image--link">
+        <Link to={props.link} target="_blank" rel="noopener noreferrer" className="projects__card-image--link">
           <div className="projects__card-image--container">
             <img src={props.image} alt={props.title} />
         </div>
