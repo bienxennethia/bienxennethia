@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 import './Header.scss';
 import { Logo, Nav, Close } from '../Icons/Icons';
-import MyResume from './resume.pdf';
+import MyResume from './cv.pdf';
 
 const NavLink = ({ to, children, onClick, offsetVal = -90, className}) => {
   
