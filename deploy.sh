@@ -6,7 +6,7 @@ rm -rf node_modules;
 
 # install nvm and node
 source $NVM_DIR/nvm.sh;
-nvm use 16.18.0;
+nvm use;
 
 # install npm packages
 echo "Installing npm packages..";
