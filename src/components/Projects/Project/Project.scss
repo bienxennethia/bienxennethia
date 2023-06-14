@@ -49,12 +49,21 @@
     color: var(--black);
   }
 
-  &-link {
-    color: var(--blue);
-    text-decoration: none;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
+  &-tech--list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2px;
+
+    svg {
+      width: 25px;
+      height: 25px;
+    }
+
+    .link svg {
+      width: 15px;
+      height: 15px;
+    }
   }
 
   @media screen and (min-width: 640px) {
@@ -76,6 +85,24 @@
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+    overflow: initial;
+
+    &::before {
+      counter-increment: section;
+      content: counter(section);
+      font-size: 10rem;
+      position: absolute;
+      top: -15%;
+      opacity: 0.5;
+    }
+
+    &:nth-of-type(odd)::before {
+      left: 0;
+    }
+
+    &:nth-of-type(even)::before {
+      right: 0;
+    }
 
     &:last-of-type {
       padding-bottom: 0;
