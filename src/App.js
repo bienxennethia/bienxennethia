@@ -8,6 +8,7 @@ import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Projects from './components/Projects/Projects';
 import Experience from './components/Experience/Experience';
+import Skills from './components/Skills/Skills';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <div className="container">
         <Header />
         <Home />
+        <Skills/>
         <Projects />
         <Experience />
         <Footer />
