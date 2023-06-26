@@ -1,0 +1,59 @@
+.sidebar {
+  display: none;
+
+
+  @media screen and (min-width: 980px) {
+    display: block;
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    left: 3%;
+
+    &__content {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      height: 100%;
+
+      &--gmail {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        gap: 25px;
+        z-index: 9999;
+        transition: var(--transition);
+        color: var(--hot-pink);
+
+        &::before {
+          content: '';
+          display: block;
+          width: 100px;
+          height: 1px;
+          margin: 0px auto;
+          background-color: var(--hot-pink);
+          transform: rotate(-90deg) translateX(-50%);
+          transition: var(--transition-ease);
+        }
+
+        a {
+          transform: rotate(-90deg) translateX(-50%);
+          position: absolute;
+          top: 120px;
+          transition: var(--transition-ease);
+        }
+
+        &:hover {
+          &::before {
+            width: 130px;
+          }
+          
+          a {
+            top: 160px;
+          }
+        }
+      }
+    }
+  }
+}
