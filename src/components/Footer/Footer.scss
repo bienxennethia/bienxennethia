@@ -3,7 +3,7 @@
   
   &__container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     justify-content: space-between;
     padding: 30px;
     align-items: center;
@@ -11,15 +11,15 @@
     margin: 0 auto;
     row-gap: 15px;
 
-    p {
-      text-align: center;
+    .icons__container {
+      display: flex;
     }
 
-    @media (min-width: 640px) {
-      flex-direction: row;
+    @media screen and (min-width: 980px) {
+      justify-content: center;
 
-      p {
-        text-align: left;
+      .icons__container {
+        display: none;
       }
     }
   }

@@ -11,8 +11,49 @@
 
     a:hover {
       svg {
+        fill: var(--dark-hot-pink);
+      }
+    }
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  @media screen and (min-width: 980px) {
+    &__container {
+      flex-direction: column;
+      position: fixed;
+      bottom: 0;
+      gap: 25px;
+      z-index: 9999;
+      transition: var(--transition);
+
+      &::after {
+        content: '';
+        display: block;
+        width: 1px;
+        height: 90px;
+        margin: 0px auto;
+        background-color: var(--hot-pink);
+      }
+
+      svg {
         fill: var(--hot-pink);
       }
+
+      a:hover {
+        & ~ .icons__logo {
+          top: -75px;
+        }
+      }
+    }
+
+    &__logo {
+      display: block;
+      position: absolute;
+      top: -55px;
+      transition: var(--transition);
     }
   }
 }

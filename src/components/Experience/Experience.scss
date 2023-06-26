@@ -1,10 +1,5 @@
 .experience {
   &__content {
-
-    &--company {
-      color: var(--blue);
-    }
-
     &--item {
       padding: 25px;
 
@@ -13,7 +8,7 @@
       }
 
       &:last-of-type {
-        padding-bottom: 0;
+        padding: 0 25px;
       }
     }
 
@@ -30,12 +25,15 @@
   }
 
   @media screen and (min-width: 640px) {
-    &__container {
-      padding: 50px;
-    }
     &__content {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media screen and (min-width: 980px) {
+    &__container {
+      padding: 50px;
     }
   }
 }

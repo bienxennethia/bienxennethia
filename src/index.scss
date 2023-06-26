@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
-html {
+:root {
   --transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
   --transition-ease: all .35s ease-in-out;
-  --dark-hot-pink: #ee006c;
+  --dark-hot-pink: #f74e79;
   --hot-pink: #F9688D;
   --light-pink: #fb9cb4;
   --white: #FFF;
@@ -13,6 +13,12 @@ html {
   --border-radius: 5px;
   --max-width: 1140px;
   --margin-center: 0 auto;
+  --max-width-sm: 200px;
+  --max-width-md: 250px;
+  --md: 640px;
+  --lg: 980px;
+  --xl: 1280px;
+  --xxl: 1440px;
 }
 
 body {
@@ -44,26 +50,120 @@ ul {
 a {
   text-decoration: none;
   text-decoration-skip-ink: auto;
-  color: var(--white);
+  color: var(--hot-pink);
   cursor: pointer;
 
   &:hover {
-    color: var(--hot-pink);
+    color: var(--dark-hot-pink);
+  }
+}
+
+.button {
+  color: var(--white);
+  background-color: var(--hot-pink);
+  padding: 10px 15px;
+  border-radius: 5px;
+  display: inline-block;
+
+  &:hover {
+    background-color: var(--dark-hot-pink);
+    color: var(--white);
   }
 }
 
 section {
   margin: 0 auto;
-  padding: 10px 0;
-  max-width: calc(100% - 32px);
+  padding-bottom: 20px;
+
+  &:not(.home) {
+    padding-top: 20px;
+  }
 
   @media screen and (min-width: 640px) {
     max-width: calc(100% - 64px);
   }
 
   @media screen and (min-width: 1280px) {
+    max-width: calc(100% - 120px);
+    padding-bottom: 50px;
+
+    &:not(.home) {
+      padding-top: 50px;
+    }
+  }
+}
+
+.container {
+  max-width: calc(100% - 32px);
+  margin: auto;
+
+  &--side {
+    display: none;
+  }
+
+  @media screen and (min-width: 640px) {
+    max-width: calc(100% - 64px);
+  }
+
+  @media screen and (min-width: 980px) {
+    &--side {
+      display: block;
+      position: fixed;
+      height: 100vh;
+      top: 0;
+      background-color: lightcyan;
+
+      &__content {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+      }
+    }
+
+    &--gmail {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      gap: 25px;
+      z-index: 9999;
+      transition: var(--transition);
+      color: var(--hot-pink);
+
+      &::before {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 1px;
+        margin: 0px auto;
+        background-color: var(--hot-pink);
+        transform: rotate(-90deg) translateX(-50%);
+        transition: var(--transition-ease);
+      }
+
+      a {
+        transform: rotate(-90deg) translateX(-50%);
+        position: absolute;
+        top: 120px;
+        transition: var(--transition-ease);
+      }
+
+      &:hover {
+        &::before {
+          width: 130px;
+        }
+        
+        a {
+          top: 160px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
     max-width: var(--max-width);
-    padding: 50px 0px;
   }
 }
 
@@ -81,4 +181,12 @@ svg {
   width: 50px;
   height: 50px;
   fill: var(--hot-pink);
+}
+
+.highlight {
+  color: var(--hot-pink);
+
+  &.thea {
+    white-space: nowrap;
+  }
 }

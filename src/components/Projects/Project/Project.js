@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import "./Project.scss";
-import { ReactComponent as AEM } from '../Images/aem.svg';
+// import { ReactComponent as AEM } from '../Images/aem.svg';
 import { ReactComponent as ExternalIcon } from '../Images/link.svg';
 
 const Project = (props) => {
-  const techIcons = {
-    "aem": <AEM />,
-  }
+  // const techIcons = {
+  //   "aem": <AEM />,
+  // }
 
   return (
     <div className="projects__card">
@@ -25,13 +25,13 @@ const Project = (props) => {
         <p className="projects__card-copy">{props.copy}</p>
         <div className="projects__card-tech">
           <ul className="projects__card-tech--list">
-            {props.tech.map((tech, index) => {
+            {/* {props.tech.map((tech, index) => {
               return (
                 <li key={index} className={`projects__card-tech--item ${tech}`}>
                   {techIcons[tech]}
                 </li>
               )
-            })}
+            })} */}
             <li><Link to={props.link} className="projects__card-tech--item link" target="_blank" rel="noopener noreferrer"><ExternalIcon /></Link></li>
           </ul>
         </div>
