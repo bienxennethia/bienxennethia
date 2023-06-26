@@ -7,7 +7,7 @@ const Experience = () => {
     <section className="experience" id="experience">
       <div className="experience__container">
         <h1 className="experience__title title">Experience</h1>
-        <h1 className="experience__content--company">Code and Theory</h1>
+        <h1 className="experience__content--company highlight">Code and Theory</h1>
         <div className="experience__content">
           <div className="experience__content--item">
             <h2 className="experience__content--title">AEM Developer</h2>

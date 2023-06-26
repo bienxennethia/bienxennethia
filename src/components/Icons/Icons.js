@@ -16,6 +16,9 @@ const Icons = () => {
       <Link to="https://github.com/bienxennethia" target="_blank"><GitHub /></Link>
       <Link to="mailto:bienxennethia@gmail.com"><Email /></Link>
       <Link to="https://www.linkedin.com/in/bienxennethia/" target="_blank"><LinkedIn /></Link>
+      <div className="icons__logo">
+        <Logo />
+      </div>
     </div>
   );
 };
